@@ -358,6 +358,84 @@ var gadget6_addr_485=0x423B18;
 var gadget7_addr_485=0x628594;
 var gadget8_addr_485=0x2BACB8;
 
+//CEX 4.86
+var toc_addr_486 = 0x6F5558;
+var gadget1_addr_486=0x0D9684;
+var gadget2_addr_486=0x097604;
+var gadget3_addr_486=0x60EFD8;
+var gadget4_addr_486=0x19D3B0;
+var gadget5_addr_486=0x42C778;
+var gadget6_addr_486=0x423B18;
+var gadget7_addr_486=0x628594;
+var gadget8_addr_486=0x2BACB8;
+
+//CEX 4.87
+var toc_addr_487 = 0x6F5558;
+var gadget1_addr_487=0x0D9684;
+var gadget2_addr_487=0x097604;
+var gadget3_addr_487=0x60EFD8;
+var gadget4_addr_487=0x19D3B0;
+var gadget5_addr_487=0x42C778;
+var gadget6_addr_487=0x423B18;
+var gadget7_addr_487=0x628594;
+var gadget8_addr_487=0x2BACB8;
+
+//CEX 4.88
+var toc_addr_488 = 0x6F5558;
+var gadget1_addr_488=0x0D9684;
+var gadget2_addr_488=0x097604;
+var gadget3_addr_488=0x60EFD8;
+var gadget4_addr_488=0x19D3B0;
+var gadget5_addr_488=0x42C778;
+var gadget6_addr_488=0x423B18;
+var gadget7_addr_488=0x628594;
+var gadget8_addr_488=0x2BACB8;
+
+//CEX 4.89
+var toc_addr_489 = 0x6F5558;
+var gadget1_addr_489=0x0D9684;
+var gadget2_addr_489=0x097604;
+var gadget3_addr_489=0x60EFD8;
+var gadget4_addr_489=0x19D3B0;
+var gadget5_addr_489=0x42C778;
+var gadget6_addr_489=0x423B18;
+var gadget7_addr_489=0x628594;
+var gadget8_addr_489=0x2BACB8;
+
+//CEX 4.90
+var toc_addr_490 = 0x6F5558;
+var gadget1_addr_490=0x0D9684;
+var gadget2_addr_490=0x097604;
+var gadget3_addr_490=0x60E588;
+var gadget4_addr_490=0x19D3B0;
+var gadget5_addr_490=0x42C774; //0x42C780;
+var gadget6_addr_490=0x423B14; //0x423B20;
+var gadget7_addr_490=0x627BE4;
+var gadget8_addr_490=0x2BACB0;
+
+//CEX 4.91
+var toc_addr_491 = 0x6F5558;
+var gadget1_addr_491=0x0D9684;
+var gadget2_addr_491=0x097604;
+var gadget3_addr_491=0x60EFD8;
+var gadget4_addr_491=0x19D3B0;
+var gadget5_addr_491=0x42C778;
+var gadget6_addr_491=0x423B18;
+var gadget7_addr_491=0x628594;
+var gadget8_addr_491=0x2BACB8;
+
+//CEX 4.92
+var toc_addr_492 = 0x6F5558;
+var gadget1_addr_492=0x0D9684;
+var gadget2_addr_492=0x097604;
+var gadget3_addr_492=0x60EFD8;
+var gadget4_addr_492=0x19D3B0;
+var gadget5_addr_492=0x42C778;
+var gadget6_addr_492=0x423B18;
+var gadget7_addr_492=0x628594;
+var gadget8_addr_492=0x2BACB8;
+
+
 function asciiAt(str, i){
 	return str.charCodeAt(i)&0xFF;
 }
@@ -417,7 +495,7 @@ function logAdd(txt)
 	if(debug===true)
 	{
 		if(document.getElementById('log').innerHTML==="")setInnerHTML(document.getElementById('log'),hr);
-		addInnerHTML(document.getElementById('log'),txt + br); 
+		addInnerHTML(document.getElementById('log'),txt + br);
 	}
 }
 function clearLogEntry()
@@ -443,7 +521,7 @@ String.prototype.replaceAt=function(index, ch)
 Number.prototype.noExponents=function()
 {
     var data= String(this).split(/[eE]/);
-    if(data.length== 1) return data[0]; 
+    if(data.length== 1) return data[0];
     var  z= '', sign= this<0? '-':'',
     str= data[0].replace('.', ''),
     mag= Number(data[1])+ 1;
@@ -452,7 +530,7 @@ Number.prototype.noExponents=function()
         while(mag++) z += '0';
         return z + str.replace(/^\-/,'');
     }
-    mag -= str.length;  
+    mag -= str.length;
     while(mag--) z += '0';
     return str + z;
 }
@@ -500,7 +578,7 @@ function generateIEEE754(address, size)
 		(address >> 16) & 0xFF,
 		(address >> 8) & 0xFF,
 		(address) & 0xFF,
-		
+
 		(size >> 24) & 0xFF,
 		(size >> 16) & 0xFF,
 		(size >> 8) & 0xFF,
@@ -583,7 +661,7 @@ function enable_trigger()
 	enable_element(document.getElementById('btnTrigger'));
 	enable_element(document.getElementById('btnReset'));
 	enable_element(document.getElementById('dex'));
-	
+
 }
 function resetOptions(cleanResult)
 {
@@ -662,12 +740,12 @@ function usb(port)
 	{
 		if((usb_0.checked===false)&&(usb_1.checked===false)&&(usb_6.checked===false)){usb_0.checked=true;port=0;}
 	}
-	else 
+	else
 	{
 		logAdd("Malformed HTML checkbox options!");
 		return;
 	}
-	
+
 	switch (port){
 	case 1:
 			used_port=1;
@@ -676,7 +754,7 @@ function usb(port)
 			cbuncheck(sd_0);
 			cbuncheck(cf_0);
 			cbuncheck(ms_0);
-			
+
 			break;
 	case 6:
 			used_port=6;
@@ -686,7 +764,7 @@ function usb(port)
 			cbuncheck(cf_0);
 			cbuncheck(ms_0);
 			break;
-			
+
 	case 1000:
 			used_port=1000;
 			cbuncheck(usb_0);
@@ -755,7 +833,7 @@ function dex()
 		}
 		cleanGUI();
 	}
-	
+
 }
 function initDEX()
 {
@@ -798,17 +876,17 @@ function findJsVariableOffset(name,exploit_data,base,size)
 //####################################################################################################################################################################
 function ps3chk(){
 
-	var fwCompat = ["4.00","4.10","4.11","4.20","4.21","4.25","4.30","4.31","4.40","4.41","4.45","4.46","4.50","4.53","4.55","4.60","4.65","4.66","4.70","4.75","4.76","4.78","4.80","4.81","4.82","4.83","4.84","4.85"];
+	var fwCompat = ["4.00","4.10","4.11","4.20","4.21","4.25","4.30","4.31","4.40","4.41","4.45","4.46","4.50","4.53","4.55","4.60","4.65","4.66","4.70","4.75","4.76","4.78","4.80","4.81","4.82","4.83","4.84","4.85","4.86","4.87","4.88","4.89","4.90","4.91","4.92"];
 	var ua = navigator.userAgent;
 	var uaStringCheck = ua.substring(ua.indexOf("5.0 (") + 5, ua.indexOf(") Apple") - 7);
 	var fwVersion = ua.substring(ua.indexOf("5.0 (") + 19, ua.indexOf(") Apple"));
-	var msgHFW = "ATTENTION!\n\nYour firmware version requires HFW (Hybrid Firmware) to be installed. OFW is not supported!\n\nThis page cannot distinguish between OFW and HFW.";
+	var msgHFW = "Congratulations! Your PS3 is running FW " + fwVersion + ", which is compatible with PS3Xploit!\n\nATTENTION!\n\nYour firmware version requires HFW (Hybrid Firmware) to be installed. OFW is not supported!";
 	var msgCongrats = "Congratulations! We've detected your PlayStation 3 is running FW " + fwVersion + ", which is compatible with PS3Xploit! Enjoy!";
-	resetOptions();	
+	resetOptions();
 	switch (uaStringCheck) {
 		case "PLAYSTATION":
 			switch (fwVersion) {
-				
+
 				case fwCompat[0]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_400;
@@ -821,7 +899,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_400;
 					gadget8_addr=gadget8_addr_400;
 					break;
-					
+
 				case fwCompat[1]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_410;
@@ -834,7 +912,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_410;
 					gadget8_addr=gadget8_addr_410;
 					break;
-					
+
 				case fwCompat[2]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_411;
@@ -847,7 +925,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_411;
 					gadget8_addr=gadget8_addr_411;
 					break;
-					
+
 				case fwCompat[3]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_420;
@@ -860,7 +938,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_420;
 					gadget8_addr=gadget8_addr_420;
 					break;
-					
+
 				case fwCompat[4]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_421;
@@ -873,7 +951,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_421;
 					gadget8_addr=gadget8_addr_421;
 					break;
-					
+
 				case fwCompat[5]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_425;
@@ -886,7 +964,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_425;
 					gadget8_addr=gadget8_addr_425;
 					break;
-					
+
 				case fwCompat[6]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_430;
@@ -899,7 +977,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_430;
 					gadget8_addr=gadget8_addr_430;
 					break;
-					
+
 				case fwCompat[7]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_431;
@@ -912,7 +990,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_431;
 					gadget8_addr=gadget8_addr_431;
 					break;
-					
+
 				case fwCompat[8]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_440;
@@ -925,7 +1003,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_440;
 					gadget8_addr=gadget8_addr_440;
 					break;
-					
+
 				case fwCompat[9]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_441;
@@ -938,7 +1016,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_441;
 					gadget8_addr=gadget8_addr_441;
 					break;
-					
+
 				case fwCompat[10]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_445;
@@ -951,7 +1029,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_445;
 					gadget8_addr=gadget8_addr_445;
 					break;
-					
+
 				case fwCompat[11]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_446;
@@ -964,7 +1042,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_446;
 					gadget8_addr=gadget8_addr_446;
 					break;
-					
+
 				case fwCompat[12]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_450;
@@ -977,7 +1055,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_450;
 					gadget8_addr=gadget8_addr_450;
 					break;
-					
+
 				case fwCompat[13]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_453;
@@ -990,7 +1068,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_453;
 					gadget8_addr=gadget8_addr_453;
 					break;
-					
+
 				case fwCompat[14]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_455;
@@ -1003,7 +1081,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_455;
 					gadget8_addr=gadget8_addr_455;
 					break;
-					
+
 				case fwCompat[15]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_460;
@@ -1016,7 +1094,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_460;
 					gadget8_addr=gadget8_addr_460;
 					break;
-					
+
 				case fwCompat[16]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_465;
@@ -1029,7 +1107,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_465;
 					gadget8_addr=gadget8_addr_465;
 					break;
-					
+
 				case fwCompat[17]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_466;
@@ -1042,7 +1120,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_466;
 					gadget8_addr=gadget8_addr_466;
 					break;
-					
+
 				case fwCompat[18]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_470;
@@ -1055,7 +1133,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_470;
 					gadget8_addr=gadget8_addr_470;
 					break;
-					
+
 				case fwCompat[19]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_475;
@@ -1068,7 +1146,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_475;
 					gadget8_addr=gadget8_addr_475;
 					break;
-					
+
 				case fwCompat[20]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_476;
@@ -1081,7 +1159,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_476;
 					gadget8_addr=gadget8_addr_476;
 					break;
-					
+
 				case fwCompat[21]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_478;
@@ -1094,7 +1172,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_478;
 					gadget8_addr=gadget8_addr_478;
 					break;
-					
+
 				case fwCompat[22]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_480;
@@ -1107,6 +1185,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_480;
 					gadget8_addr=gadget8_addr_480;
 					break;
+
 				case fwCompat[23]:
 					alert(msgCongrats);
 					initDEX();
@@ -1120,7 +1199,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_481;
 					gadget8_addr=gadget8_addr_481;
 					break;
-					
+
 				case fwCompat[24]:
 					alert(msgCongrats);
 					toc_addr = toc_addr_482;
@@ -1133,7 +1212,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_482;
 					gadget8_addr=gadget8_addr_482;
 					break;
-					
+
 				case fwCompat[25]:
 					alert(msgHFW);
 					toc_addr = toc_addr_483;
@@ -1146,7 +1225,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_483;
 					gadget8_addr=gadget8_addr_483;
 					break;
-					
+
 				case fwCompat[26]:
 					alert(msgHFW);
 					toc_addr = toc_addr_484;
@@ -1159,7 +1238,7 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_484;
 					gadget8_addr=gadget8_addr_484;
 					break;
-					
+
 				case fwCompat[27]:
 					alert(msgHFW);
 					toc_addr = toc_addr_485;
@@ -1172,7 +1251,98 @@ function ps3chk(){
 					gadget7_addr=gadget7_addr_485;
 					gadget8_addr=gadget8_addr_485;
 					break;
-					
+
+				case fwCompat[28]:
+					alert(msgHFW);
+					toc_addr = toc_addr_486;
+					gadget1_addr=gadget1_addr_486;
+					gadget2_addr=gadget2_addr_486;
+					gadget3_addr=gadget3_addr_486;
+					gadget4_addr=gadget4_addr_486;
+					gadget5_addr=gadget5_addr_486;
+					gadget6_addr=gadget6_addr_486;
+					gadget7_addr=gadget7_addr_486;
+					gadget8_addr=gadget8_addr_486;
+					break;
+
+				case fwCompat[29]:
+					alert(msgHFW);
+					toc_addr = toc_addr_487;
+					gadget1_addr=gadget1_addr_487;
+					gadget2_addr=gadget2_addr_487;
+					gadget3_addr=gadget3_addr_487;
+					gadget4_addr=gadget4_addr_487;
+					gadget5_addr=gadget5_addr_487;
+					gadget6_addr=gadget6_addr_487;
+					gadget7_addr=gadget7_addr_487;
+					gadget8_addr=gadget8_addr_487;
+					break;
+
+				case fwCompat[30]:
+					alert(msgHFW);
+					toc_addr = toc_addr_488;
+					gadget1_addr=gadget1_addr_488;
+					gadget2_addr=gadget2_addr_488;
+					gadget3_addr=gadget3_addr_488;
+					gadget4_addr=gadget4_addr_488;
+					gadget5_addr=gadget5_addr_488;
+					gadget6_addr=gadget6_addr_488;
+					gadget7_addr=gadget7_addr_488;
+					gadget8_addr=gadget8_addr_488;
+					break;
+
+				case fwCompat[31]:
+					alert(msgHFW);
+					toc_addr = toc_addr_489;
+					gadget1_addr=gadget1_addr_489;
+					gadget2_addr=gadget2_addr_489;
+					gadget3_addr=gadget3_addr_489;
+					gadget4_addr=gadget4_addr_489;
+					gadget5_addr=gadget5_addr_489;
+					gadget6_addr=gadget6_addr_489;
+					gadget7_addr=gadget7_addr_489;
+					gadget8_addr=gadget8_addr_489;
+					break;
+
+				case fwCompat[32]:
+					alert(msgHFW);
+					toc_addr = toc_addr_490;
+					gadget1_addr=gadget1_addr_490;
+					gadget2_addr=gadget2_addr_490;
+					gadget3_addr=gadget3_addr_490;
+					gadget4_addr=gadget4_addr_490;
+					gadget5_addr=gadget5_addr_490;
+					gadget6_addr=gadget6_addr_490;
+					gadget7_addr=gadget7_addr_490;
+					gadget8_addr=gadget8_addr_490;
+					break;
+
+				case fwCompat[33]:
+					alert(msgHFW);
+					toc_addr = toc_addr_491;
+					gadget1_addr=gadget1_addr_491;
+					gadget2_addr=gadget2_addr_491;
+					gadget3_addr=gadget3_addr_491;
+					gadget4_addr=gadget4_addr_491;
+					gadget5_addr=gadget5_addr_491;
+					gadget6_addr=gadget6_addr_491;
+					gadget7_addr=gadget7_addr_491;
+					gadget8_addr=gadget8_addr_491;
+					break;
+
+				case fwCompat[34]:
+					alert(msgHFW);
+					toc_addr = toc_addr_492;
+					gadget1_addr=gadget1_addr_492;
+					gadget2_addr=gadget2_addr_492;
+					gadget3_addr=gadget3_addr_492;
+					gadget4_addr=gadget4_addr_492;
+					gadget5_addr=gadget5_addr_492;
+					gadget6_addr=gadget6_addr_492;
+					gadget7_addr=gadget7_addr_492;
+					gadget8_addr=gadget8_addr_492;
+					break;
+
 				default:
 					alert("Your PS3 is not on FW 4.10+! Your current running FW version is " + fwVersion + ", which is not compatible with PS3Xploit. All features have been disabled");
 					disable_btn();
@@ -1180,7 +1350,7 @@ function ps3chk(){
 					break;
 			}
 			break;
-		
+
 		default:
 			alert("You are not on a PlayStation System! All features have been disabled");
 			disable_btn();

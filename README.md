@@ -3,6 +3,10 @@
 Official Thread:
 https://www.psx-place.com/threads/ps3xploit-4-84-hfw-flash-writer-idps-flash-dumpers-v2-0-1-now-install-cfw-from-4-84.23123/
 
+v410-492
+
+* Added Support 4.86 HFW to 4.92 HFW
+
 
 v2.0.2
 
