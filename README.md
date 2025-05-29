@@ -1,17 +1,18 @@
 # PS3 NAND/NOR/eMMC Flash/IDPS Dumper
 
-[Dump NOR to USB](https://aldostools.github.io/flash-dumper/index_nor.html)
-[Dump NOR to HDD](https://aldostools.github.io/flash-dumper/index_nor_hdd.html)
-[Dump NAND to USB](https://aldostools.github.io/flash-dumper/index_nand.html)
-[Dump NAND to HDD](https://aldostools.github.io/flash-dumper/index_nand_hdd.html)
-[Dump IDPS to USB](https://aldostools.github.io/flash-dumper/index_idps.html)
+[Dump NOR to USB](https://aldostools.github.io/flash-dumper/index_nor.html)<br>
+[Dump NOR to HDD](https://aldostools.github.io/flash-dumper/index_nor_hdd.html)<br>
+[Dump NAND to USB](https://aldostools.github.io/flash-dumper/index_nand.html)<br>
+[Dump NAND to HDD](https://aldostools.github.io/flash-dumper/index_nand_hdd.html)<br>
+[Dump IDPS to USB](https://aldostools.github.io/flash-dumper/index_idps.html)<br>
+<br>
 
-Official Thread:
-https://www.psx-place.com/threads/ps3xploit-4-84-hfw-flash-writer-idps-flash-dumpers-v2-0-1-now-install-cfw-from-4-84.23123/
+Official Thread:<br>
+https://www.psx-place.com/threads/ps3xploit-idps-flash-dumpers.23123/
 
 v410-492
 
-* Added Support 4.86 HFW to 4.92 HFW
+* Added Support 4.86 HFW to 4.92 HFW (CEX)
 
 
 v2.0.2
