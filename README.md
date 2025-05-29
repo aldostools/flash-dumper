@@ -1,5 +1,11 @@
 # PS3 NAND/NOR/eMMC Flash/IDPS Dumper
 
+[Dump NOR to USB](https://aldostools.github.io/flash-dumper/index_nor.html)
+[Dump NOR to HDD](https://aldostools.github.io/flash-dumper/index_nor_hdd.html)
+[Dump NAND to USB](https://aldostools.github.io/flash-dumper/index_nand.html)
+[Dump NAND to HDD](https://aldostools.github.io/flash-dumper/index_nand_hdd.html)
+[Dump IDPS to USB](https://aldostools.github.io/flash-dumper/index_idps.html)
+
 Official Thread:
 https://www.psx-place.com/threads/ps3xploit-4-84-hfw-flash-writer-idps-flash-dumpers-v2-0-1-now-install-cfw-from-4-84.23123/
 
